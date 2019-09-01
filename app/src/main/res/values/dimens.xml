@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margins based on 5s -->
+    <dimen name="smallest_margin">5dp</dimen>
+    <dimen name="smaller_margin">10dp</dimen>
+    <dimen name="small_margin">20dp</dimen>
+    <dimen name="base_margin">25dp</dimen>
+    <dimen name="large_margin">30dp</dimen>
+    <dimen name="larger_margin">40dp</dimen>
+    <dimen name="largest_margin">50dp</dimen>
+    <dimen name="edge_margin">15dp</dimen>
+
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <HorizontalScrollView
+        android:id="@+id/frequency_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="2dp"
+        style="@style/FadingHorizontalScrollView"
+        android:scrollbarTrackHorizontal="@color/white"
+        android:scrollbarThumbHorizontal="@color/text_secondary">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/edge_margin"
+            android:paddingEnd="@dimen/edge_margin"
+            android:paddingBottom="@dimen/small_margin">
+
+            <Button
+                android:id="@+id/frequency_one_time"
+                android:text="Once"
+                style="@style/FrequencyButton"/>
+
+            <Button
+                android:id="@+id/frequency_weekly"
+                android:text="Weekly"
+                style="@style/FrequencyButton"/>
+
+            <Button
+                android:id="@+id/frequency_bi_weekly"
+                android:text="Bi-weekly"
+                style="@style/FrequencyButton"/>
+
+            <Button
+                android:id="@+id/frequency_monthly"
+                android:text="Monthly"
+                style="@style/FrequencyButton"/>
+
+            <Button
+                android:id="@+id/frequency_quarterly"
+                android:text="Quarterly"
+                style="@style/FrequencyButton"/>
+
+            <Button
+                android:id="@+id/frequency_semi_annually"
+                android:text="Semi Annually"
+                style="@style/FrequencyButton"/>
+
+            <Button
+                android:id="@+id/frequency_annually"
+                android:text="Annually"
+                style="@style/FrequencyButton"
+                android:layout_marginEnd="40dp"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/frequency_dates"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/edge_margin"
+        android:layout_below="@id/frequency_container"
+        android:alpha="1"
+        android:layout_marginStart="@dimen/edge_margin"
+        android:layout_marginEnd="15dp">
+
+        <LinearLayout
+            android:id="@+id/frequency_start"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="From"/>
+
+            <TextView
+                style="@style/CalendarTextView"
+                android:id="@+id/start_date"
+                android:text="Today" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frequency_end"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/smallest_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:text="To"/>
+
+            <TextView
+                style="@style/CalendarTextView"
+                android:id="@+id/end_date"
+                android:text="No End Date"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
